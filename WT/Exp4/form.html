@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Registration</title>
+
+    <style>
+      :root {
+        --primary: #ceb2f7;
+        --light: #212121;
+        --dark: #f5f5f5;
+      }
+
+      body {
+        background-color: var(--dark);
+      }
+
+      div {
+        width: 100%;
+      }
+
+      form {
+        max-width: 600px;
+        margin: 0 auto;
+        background-color: var(--light);
+      }
+
+      h1 {
+        margin: 0;
+        padding: 1rem;
+        color: white;
+      }
+
+      .form-control {
+        padding: 1rem;
+      }
+
+      label,
+      p {
+        display: block;
+        width: 550px;
+        padding-bottom: 0.4rem;
+        color: var(--primary);
+        font-weight: 600;
+      }
+
+      p {
+        margin: 0;
+        padding: 1rem;
+      }
+
+      .padded-input {
+        padding: 0.25rem;
+      }
+
+      .radio-checkbox-label {
+        display: inline-block;
+        color: var(--dark);
+        font-weight: initial;
+      }
+
+      .button-container {
+        padding: 0.8rem;
+        margin-left: 22.5rem;
+        display: flex;
+      }
+
+      .button {
+        color: var(--light);
+        padding: 0.8rem 1.6rem;
+        cursor: pointer;
+        outline: none;
+        border: none;
+        font-weight: 600;
+        margin-left: 0.8rem;
+      }
+
+      input[type="submit"] {
+        background-color: var(--primary);
+        color: var(--light);
+      }
+    </style>
+  </head>
+  <body>
+    <form method="POST">
+      <div>
+        <h1>Virtual Event Registration Form</h1>
+        <p>About this Virtual Event <br>
+
+          Topic: Working from Home Success <br>
+          Date: May 05-06, 2021 <br>
+          Time: 9:00 AM - 1:00 PM <br>
+          
+          In this virtual event, we'll talk about success stories of work at home people. We'll discuss how did they get started, what are the needed tools, how much information or knowledge required to start, and many more.</p>
+      </div>
+
+      <div class="form-control">
+        <label for="name">Name</label
+        ><input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="John Wick"
+          required
+          autofocus
+          class="padded-input"
+        />
+      </div>
+
+      <div class="form-control">
+        <label for="age">Age</label
+        ><input
+          type="number"
+          id="age"
+          name="age"
+          required
+          autofocus
+          class="padded-input"
+        />
+      </div>
+
+      <div class="form-control">
+        <label for="gender">Gender</label>
+        <div>
+          <input
+            type="radio"
+            name="sleeve"
+            id="male"
+            value="male"
+          />
+          <label for="male" class="radio-checkbox-label"
+            >Male</label
+          >
+        </div>
+
+        <div>
+          <input
+            type="radio"
+            name="sleeve"
+            id="female"
+            value="female"
+          />
+          <label for="female" class="radio-checkbox-label"
+            >Female</label
+          >
+        </div>
+      </div>
+
+      <div class="form-control">
+        <label for="email">Email</label
+        ><input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="john@wick.com"
+          required
+          class="padded-input"
+        />
+      </div>
+
+      <div class="form-control">
+        <label for="phone">Phone</label
+        ><input
+          type="tel"
+          id="phone"
+          name="phone"
+          placeholder="1234567890"
+          pattern="[0-9]{10}"
+          required
+          class="padded-input"
+        />
+      </div>
+
+      <div class="form-control">
+        <label for="date">Event Date</label
+        ><input type="date" id="date" name="date" class="padded-input" min="2021-05-05" max="2021-05-06" />
+      </div>
+
+      
+
+      <div class="form-control">
+        <label for="design">Proof of Identity</label
+        ><input type="file" id="design" name="design" accept="image/*" />
+      </div>
+
+      <div class="form-control">
+          <label for="payment">Payment Method</label>
+          <select name="payment" id="payment" class="padded-input">
+            <option value="" selected disabled hidden>Select a method</option>
+            <option value="creditcard">Credit Card</option>
+            <option value="paypal">PayPal</option>
+            <option value="wiretransfer">Wire Transfer</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="button-container">
+        <input type="reset" value="Reset" class="button" />
+
+        <input type="submit" value="Submit" class="button" />
+      </div>
+    </form>
+  </body>
+</html>
