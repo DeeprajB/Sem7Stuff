@@ -55,7 +55,7 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "Read and Write an Image"))
         self.import_image.setText(_translate("MainWindow", "Import"))
         self.output.setText(_translate("MainWindow", "Output"))
         self.clear.setText(_translate("MainWindow", "Clear"))
