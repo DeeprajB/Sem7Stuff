@@ -1,0 +1,301 @@
+*{
+    
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    }
+    body{
+    font-family: lato;
+    }
+    .nav-area{
+    background: #262626;
+    height: 62px;
+    width: 100%;
+    }
+    .logo {
+    line-height: 60px;
+    padding: 0 20px;
+    color: white;
+    }
+    .nav-area ul{
+    float: right;
+    margin-right: 20px;
+    }
+    .nav-area ul li {
+    display: inline-block;
+    line-height: 60px;
+    margin: 0 5px;
+    }
+    .nav-area ul li a {
+    color: #fff;
+    font-size: 14px;
+    padding: 22px 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+    }
+    .nav-area ul li a:hover{
+    background: darkorange;
+    transition: .5s;
+    }
+    .btn-area{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 62px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+    }
+    #box{
+    display: none;
+    }
+    .search-container {
+        float:right;
+        margin-left: 10;
+    }
+  input[type=text] {
+      padding: 6px;
+      margin-top: 15px;
+      font-size: 17px;
+      border: none;
+    }
+  .search-container button {
+      padding: 6px 10px;
+      margin-top: 8px;
+      margin-right: 16px;
+      background: #ddd;
+      font-size: 17px;
+      border: none;
+      cursor: pointer;
+    }
+    .listing-options{
+        padding-top: 20px;
+        margin-left: 20px;
+        border-style: hidden solid hidden hidden;
+        width: 220px;
+        height: 93.5vh;
+    }
+    .listing-options > ul{
+        margin-top: 25px;
+
+    }
+    .indent{
+        margin-left: 10px;
+    }
+    .main{
+        display: flex;
+        
+    }
+    .ind-catalog{
+        margin-top: 1rem;
+    }
+    .catalog{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 150px;
+        margin-left: 13rem;
+        justify-items: center;
+        
+    }
+    .ind-catalog>a{
+        font-size: large;
+    }
+    .ind-catalog>p{
+        margin-top: 0.3rem;
+    }
+    .ind-catalog>strong{
+        font-size: x-large;
+    }
+    a {
+        color: rgba(0,0,0,0.4);
+        transition: color 0.35s ease-in-out;
+      }
+      
+      .card {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .panel {
+        transition: all 0.35s ease-in-out;
+        padding: 1.5rem 2rem;
+        /* position: absolute; */
+        background-color: rgb(66, 66, 66);
+        color: #fff;
+        width: 100%;
+        height: 65vh;
+        border: none;
+        overflow: hidden;
+      }
+      
+      .meta {
+        top: 0;
+        left: 0;
+        z-index: 1;
+        margin: 0;
+        position: relative;
+        text-align: center;
+        transform: translateX(0);
+        padding: 2rem 4rem;
+        border-right: 1px solid transparent;
+      }
+        picture {
+          position: relative;
+          display: inline-block;
+        }
+        
+        img {
+           object-fit: cover; 
+        }
+        .avatar { 
+          border-radius: 50%;
+        }
+        .name {
+          font-size: 5rem;
+          text-align: center;
+          margin-top: 1rem;
+          font-weight: 300;
+        }
+        
+        .title {
+          font-size: 2rem;
+          font-weight: 600;
+          margin: 1rem 0 0;
+        }
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: url("https://res.cloudinary.com/finnhvman/image/upload/v1541930411/pattern.png");
+        }
+        
+        .registration {
+            position: relative;
+            border-radius: 8px;
+            padding: 16px 48px;
+            box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+            overflow: hidden;
+            background-color: white;
+        }
+        
+        h1 {
+            margin: 32px 0;
+            font-family: "Roboto", "Segoe UI", BlinkMacSystemFont, system-ui, -apple-system;
+            font-weight: normal;
+            text-align: center;
+        }
+        
+        .registration > label {
+            display: block;
+            margin: 24px 0;
+            width: 320px;
+        }
+        
+        a {
+            color: rgb(var(--pure-material-primary-rgb));
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        button {
+            display: block !important;
+            margin: 32px auto;
+        }
+        
+        .done,
+        .progress {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: white;
+            visibility: hidden;
+        }
+        
+        .done {
+            transition: visibility 0s 1s;
+        }
+        
+        .signed > .done {
+            visibility: visible;
+        }
+        
+        .done > a {
+            display: inline-block;
+            text-decoration: none;
+        }
+        
+        .progress {
+            opacity: 0;
+        }
+        
+        .signed > .progress {
+            animation: loading 4s;
+        }
+        
+        @keyframes loading {
+            0% {
+                visibility: visible;
+            }
+            12.5% {
+                opacity: 0;
+            }
+            25% {
+                opacity: 1;
+            }
+            87.5% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+        
+        .left-footer,
+        .right-footer {
+            position: fixed;
+            padding: 14px;
+            bottom: 14px;
+            color: #555;
+            background-color: #eee;
+            font-family: "Roboto", "Segoe UI", BlinkMacSystemFont, system-ui, -apple-system;
+            font-size: 14px;
+            line-height: 1.5;
+            box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+        }
+        
+        .left-footer {
+            left: 0;
+            border-radius: 0 4px 4px 0;
+            text-align: left;
+        }
+        
+        .right-footer {
+            right: 0;
+            border-radius: 4px 0 0 4px;
+            text-align: right;
+        }
+        
+        .left-footer > a,
+        .right-footer > a {
+            color: black;
+        }
+        
+        .left-footer > a:hover,
+        .right-footer > a:hover {
+            text-decoration: underline;
+        }
+        
