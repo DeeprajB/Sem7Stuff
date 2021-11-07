@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Store - Register</title>
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="./General.css">
+
+</head>
+<body>
+    <div class="nav-area">
+        <input type="checkbox" id="box">
+        <label for="box" class="btn-area"><i class="fa fa-bars"></i></label>
+        <label class="logo"><img height=62px src="https://media.istockphoto.com/vectors/bold-letter-b-logo-design-element-negative-space-style-two-letters-bc-vector-id1165333600?k=20&m=1165333600&s=612x612&w=0&h=C1Yb7Hk6EeSdxMoGQY1Tj8bRk-aXtAG4CraqYRRqxqg=" alt=""></label>
+        <div class="search-container">
+            <form action="">
+              <input type="text" placeholder="Search.." name="search">
+              <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+        <ul>
+            <li><a href="./Home.html">Home</a></li>
+            <li><a href="./User.html">User Profile</a></li>
+            <li><a href="./Catalog.html">Catalog</a></li>
+            <li><a href="./Cart.html">Cart</a></li>
+            <li><a href="./Register.html">Register</a></li>
+            <li><a href="./Login.html">Login</a></li>
+        </ul>
+    </div>
+    <center>
+            <form class="form">
+                <div class="topsec">
+                    <h2>Payment Gateway</h2>
+                </div>
+                <div class="midsec">
+                    <div class="row">
+                        Type of Card
+                        <select name="card row" id="card">
+                            <option value="mscard">Mastercard</option>
+                            <option value="visa">Visa</option>
+                            <option value="rupay">Rupay</option>
+                        </select>
+                    </div>
+                    
+                    <div class="row">
+                        Card Number:
+                        <input type="text" placeholder="234787568XXXX">
+                    </div>
+                    <div class="row">
+                        Expiry Date:
+                        <input type="text" placeholder="MM/YY">
+                    </div>
+                    <div class="row">
+                        Security Pin:
+                        <input type="text" placeholder="XXX">
+                    </div>
+                    <div class="row">
+                        <input type="checkbox" id="agreement" value="agreement">
+                        <label for="agreement"> I Agree to the Terms and Conditions.</label>
+                    </div>
+                </div>
+                <div class="bottomsec">
+                    <input type="button" class="button" onclick="window.location.href='./Confirm.html'" value="Submit">
+                    <input type="button" class="button1" onclick="alert('Form Cancelled!')" value="Cancel">
+                </div>
+            </form>
+        </center>
+</body>
+</html>
+
