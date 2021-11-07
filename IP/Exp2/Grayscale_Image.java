@@ -40,6 +40,4 @@ public class Grayscale_Image {
             System.out.println("Error: "+e);
         }
     }
-
-
 }

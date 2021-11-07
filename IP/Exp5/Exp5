@@ -81,20 +81,6 @@ class Ui_MainWindow(object):
         self.img1 = QtGui.QImage(self.img.data, self.img.shape[1], self.img.shape[0], QtGui.QImage.Format_Grayscale8)
         self.imageinput.setPixmap(QtGui.QPixmap.fromImage(self.img1))
 
-    def DecimalToBinary(self,num,width):
-        bnr = bin(num).replace('0b','')
-        x = bnr[::-1]
-        while len(x) < width:
-            x += '0'
-        bnr = x[::-1]
-        return bnr
-    
-    def bit_to_img(self,array,bitselect):
-        img_con=[]
-        for i in array:
-            img_con.append(i[bitselect])
-        return img_con
-
     def bit_plane_slicing(self):
         (row, col) = self.img.shape[0:2]
         lst = []
