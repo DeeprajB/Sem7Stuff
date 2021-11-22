@@ -62,6 +62,7 @@ class Ui_MainWindow(object):
         self.upperbound = QtWidgets.QSpinBox(self.centralwidget)
         self.upperbound.setGeometry(QtCore.QRect(480, 610, 94, 30))
         self.upperbound.setMaximum(254)
+        self.upperbound.setValue(254)
         self.upperbound.setObjectName("upperbound")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
