@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html>
+	<head><title>Auto cubes and squares</title>
+<style>
+#main-container{
+	width:70%;
+	margin:auto;
+	justify-content:center;
+}
+#ip-box{
+	background-color:#eaeae8;
+	margin-bottom:20px;
+	margin-top:30px;
+	height:30px;
+	width:40%;
+}
+tr:nth-child(even) {
+  background-color: #88ffff;
+}
+#result-table{
+	width:50%;
+	border:solid 2px black;
+	text-align:center;
+}
+</style>
+	<script>
+function getN(){
+	let n=document.getElementById("ip-box").value;
+	return parseInt(n)
+}
+function createTable(){
+	let n=getN();
+	console.log(n)
+	var tableStructure;
+	if (isNaN(n)){
+		tableStructure="Invalid input."	
+	}
+	else{
+		tableStructure="<center><table id=result-table><tr><th>n</th><th>n^2</th><th>n^3</th></tr>"
+		console.log(n);
+		for(let i=0;i<n;i++){
+			let newRow="<tr><td>"+i+"</td>"+"<td>"+i**2+"</td>"+"<td>"+i**3+"</td></tr>"
+			tableStructure+=newRow;
+		}
+		tableStructure+="</table></center>"
+	}
+	document.getElementById("result-container").innerHTML=tableStructure;
+	
+}
+	</script>
+	</head>
+	<body>
+	<div id=main-container>	
+			<center><h1>Square and Cube Calculator</h1></center>
+				<center><input type=text id=ip-box></center>
+				<center><button id="calc-button" onclick="createTable()">Calculate</button></center>
+			<br>
+			<div id="result-container">&nbsp</div>
+
+	</div>
+	</body>
+</html>
+
+
