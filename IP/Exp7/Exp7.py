@@ -123,7 +123,7 @@ class Ui_MainWindow(object):
         # ehi /= row*col
         pS=0
         for i in range(len(counts)):
-            pS+=255*(counts[i]/row*col)
+            pS+=255*(counts[i]/(row*col))
             counts[i]=pS
         for i in range(row):
             for j in range(col):
