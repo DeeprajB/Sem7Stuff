@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html ng-app="formVal">
+  <head>
+    <title>Login page</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+
+    <style>
+      #content-container {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-style: solid;
+        border-width: 2px;
+        border-color: #b1b3b5;
+        padding: 30px;
+        line-height: 30px;
+        padding-bottom: 30px;
+        width: 30%;
+      }
+      #continue-button {
+        background-color: #ff00d4;
+        width: 30%;
+        border: none;
+        padding: 5px;
+        margin-top: 10px;
+      }
+      img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+      .error {
+        color: red;
+      }
+      .email.ng-invalid-email {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body ng-controller="MainCtrl as ctrl">
+    <div id="content-container">
+      <form id="register-form" ng-submit="ctrl.submit()" name="myForm">
+        <h1>Sign Up</h1>
+        <br />
+
+        <b>Full Name</b> <br />
+        <input
+          type="input"
+          id="name-input"
+          name="fullName"
+          ng-model="ctrl.user.name"
+          required
+          ng-minlength="5"
+        /><br />
+
+        <span
+          class="error"
+          ng-show="myForm.fullName.$error.required && !myForm.fullName.$pristine"
+        >
+          This is a required field <br />
+        </span>
+        <span
+          class="error"
+          ng-show="myForm.fullName.$error.minlength && !myForm.fullName.$pristine"
+        >
+          Minimum length required is 4<br />
+        </span>
+        <span
+          class="error"
+          ng-show="myForm.fullName.$invalid && !myForm.fullName.$pristine"
+        >
+          This field is invalid<br />
+        </span>
+        <b>Username</b> <br />
+        <input
+          type="input"
+          id="username-input"
+          name="uname"
+          ng-model="ctrl.user.username"
+          required
+          ng-minlength="5"
+        /><br />
+
+        <span
+          class="error"
+          ng-show="myForm.uname.$error.required && !myForm.uname.$pristine"
+        >
+          This is a required field <br />
+        </span>
+        <span
+          class="error"
+          ng-show="myForm.uname.$error.minlength && !myForm.uname.$pristine"
+        >
+          Minimum length required is 4<br />
+        </span>
+        <span
+          class="error"
+          ng-show="myForm.uname.$invalid && !myForm.uname.$pristine"
+        >
+          This field is invalid<br />
+        </span>
+
+        <b>Email address</b> <br />
+        <input
+          id="email-input"
+          name="email"
+          ng-model="ctrl.user.email"
+          type="email"
+          required
+        /><br />
+        <span
+          class="error email"
+          ng-show="myForm.email.$error.required && !myForm.email.$pristine"
+        >
+          This is a required field <br />
+        </span>
+        <span
+          class="error email"
+          ng-show="myForm.email.$invalid && !myForm.email.$pristine"
+        >
+          This field is invalid<br />
+        </span>
+
+        <b>Phone No</b> <br />
+        <input
+          type="input"
+          id="phone-input"
+          name="phone"
+          ng-model="ctrl.user.phone"
+          required
+          ng-minlength="10"
+        /><br />
+
+        <span
+          class="error"
+          ng-show="myForm.phone.$error.required && !myForm.phone.$pristine"
+        >
+          This is a required field <br />
+        </span>
+        <span
+          class="error"
+          ng-show="myForm.phone.$error.minlength && !myForm.phone.$pristine"
+        >
+          Minimum length required is 10<br />
+        </span>
+        <span
+          class="error"
+          ng-show="myForm.phone.$invalid && !myForm.phone.$pristine"
+        >
+          This field is invalid<br />
+        </span>
+        <b>Password</b><br />
+        <input
+          type="password"
+          id="password-input"
+          name="password"
+          ng-model="ctrl.user.password"
+          required
+          ng-minlength="8"
+        /><br />
+
+        <span
+          class="error"
+          ng-show="myForm.password.$error.required && !myForm.password.$pristine"
+        >
+          This is a required field <br />
+        </span>
+        <span
+          class="error"
+          ng-show="myForm.password.$error.minlength && !myForm.password.$pristine"
+        >
+          Minimum length required is 8<br />
+        </span>
+        <span
+          class="error"
+          ng-show="myForm.password.$invalid && !myForm.password.$pristine"
+        >
+          This field is invalid<br />
+        </span>
+        <input type="submit" value="Submit" id="continue-button" />
+      </form>
+    </div>
+  </body>
+  <script type="text/javascript">
+    angular.module("formVal", []).controller("MainCtrl", [
+      function () {
+        var self = this;
+      },
+    ]);
+  </script>
+</html>
